@@ -45,1145 +45,47 @@
         }
 
         /* Header & Tabs */
-        .header {
-            padding: 20px 20px 0;
-            text-align: center;
-        }
-        .header h1 {
-            font-size: 20px;
-            color: var(--text-dark);
-            margin-bottom: 15px;
-        }
-        .tabs {
-            display: flex;
-            background-color: var(--secondary);
-            border-radius: 10px;
-            padding: 5px;
-            margin-bottom: 20px;
-        }
-        .tab-btn {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            background: none;
-            border-radius: 8px;
-            font-weight: 600;
-            color: var(--text-light);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .tab-btn.active {
-            background-color: var(--white);
-            color: var(--primary);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
+        .header { padding: 20px 20px 0; text-align: center; }
+        .header h1 { font-size: 20px; color: var(--text-dark); margin-bottom: 15px; }
+        .tabs { display: flex; background-color: var(--secondary); border-radius: 10px; padding: 5px; margin-bottom: 20px; }
+        .tab-btn { flex: 1; padding: 10px; border: none; background: none; border-radius: 8px; font-weight: 600; color: var(--text-light); cursor: pointer; transition: all 0.2s; }
+        .tab-btn.active { background-color: var(--white); color: var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 
         /* Content Area */
-        .content-area {
-            flex: 1;
-            padding: 0 20px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .view {
-            display: none;
-        }
-        .view.active {
-            display: block;
-        }
+        .content-area { flex: 1; padding: 0 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; }
+        .view { display: none; }
+        .view.active { display: block; }
 
         /* Input Fields */
-        .input-group {
-            display: flex;
-            align-items: center;
-            background-color: var(--secondary);
-            border-radius: 10px;
-            padding: 10px 15px;
-            margin-bottom: 10px;
-            border: 2px solid transparent;
-        }
-        .input-group:focus-within {
-            border-color: var(--primary);
-        }
-        .input-label {
-            width: 80px;
-            font-weight: bold;
-            color: var(--text-dark);
-        }
-        .input-field {
-            flex: 1;
-            border: none;
-            background: none;
-            font-size: 18px;
-            outline: none;
-            color: var(--text-dark);
-        }
-        .input-unit {
-            color: var(--text-light);
-            font-weight: bold;
-        }
+        .input-group { display: flex; align-items: center; background-color: var(--secondary); border-radius: 10px; padding: 10px 15px; margin-bottom: 10px; border: 2px solid transparent; }
+        .input-group:focus-within { border-color: var(--primary); }
+        .input-label { width: 80px; font-weight: bold; color: var(--text-dark); }
+        .input-field { flex: 1; border: none; background: none; font-size: 18px; outline: none; color: var(--text-dark); }
+        .input-unit { color: var(--text-light); font-weight: bold; }
 
         /* Buttons */
-        .btn-action {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 10px;
-            background-color: var(--primary);
-            color: var(--white);
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background 0.2s;
-        }
-        .btn-action:hover {
-            background-color: #357ABD;
-        }
-        .btn-secondary {
-            background-color: var(--secondary);
-            color: var(--text-dark);
-            margin-top: 5px;
-        }
-        .btn-secondary:hover {
-            background-color: var(--border);
-        }
+        .btn-action { width: 100%; padding: 15px; border: none; border-radius: 10px; background-color: var(--primary); color: var(--white); font-size: 16px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: background 0.2s; }
+        .btn-action:hover { background-color: #357ABD; }
+        .btn-secondary { background-color: var(--secondary); color: var(--text-dark); margin-top: 5px; }
+        .btn-secondary:hover { background-color: var(--border); }
 
         /* Result & Solution Box */
-        .result-box {
-            background-color: #F8FAFC;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-            display: none;
-        }
-        .solution-content {
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dashed var(--border);
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--text-dark);
-            display: none;
-        }
+        .result-box { background-color: #F8FAFC; border: 1px solid var(--border); border-radius: 10px; padding: 15px; margin-top: 15px; display: none; }
+        .solution-content { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); font-size: 14px; line-height: 1.6; color: var(--text-dark); display: none; }
 
         /* Study Mode Specific */
-        .problem-box {
-            background-color: #FFFBEB;
-            border: 1px solid #FDE68A;
-            border-radius: 10px;
-            padding: 15px;
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-        .options-list {
-            list-style: none;
-        }
-        .option-item {
-            display: block;
-            padding: 12px;
-            margin-bottom: 8px;
-            background-color: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .option-item:hover {
-            background-color: var(--secondary);
-        }
-        input[type="radio"] {
-            margin-right: 10px;
-        }
+        .problem-box { background-color: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 15px; font-size: 16px; line-height: 1.5; margin-bottom: 15px; }
+        .options-list { list-style: none; }
+        .option-item { display: block; padding: 12px; margin-bottom: 8px; background-color: var(--white); border: 1px solid var(--border); border-radius: 8px; cursor: pointer; font-weight: bold; }
+        .option-item:hover { background-color: var(--secondary); }
+        input[type="radio"] { margin-right: 10px; }
 
         /* Keypad */
-        .keypad {
-            padding: 15px 20px 20px;
-            background-color: var(--secondary);
-            border-top: 1px solid var(--border);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-        }
-        .key-btn {
-            background-color: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 15px 0;
-            font-size: 18px;
-            font-weight: bold;
-            color: var(--text-dark);
-            cursor: pointer;
-            box-shadow: 0 2px 0 rgba(0,0,0,0.05);
-        }
-        .key-btn:active {
-            transform: translateY(2px);
-            box-shadow: none;
-        }
-        .key-btn.special {
-            background-color: #E0E7FF;
-            color: var(--primary);
-            font-size: 15px;
-        }
-        .key-btn.action {
-            background-color: #FEE2E2;
-            color: var(--danger);
-        }
-    </style>
-</head>
-<body>
-
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전압 전류 측정 문제기</title>
-    <style>
-        :root {
-            --primary: #4A90E2;
-            --secondary: #F3F4F6;
-            --text-dark: #1F2937;
-            --text-light: #6B7280;
-            --danger: #EF4444;
-            --success: #10B981;
-            --white: #FFFFFF;
-            --border: #E5E7EB;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-        }
-
-        body {
-            background-color: #E2E8F0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .app-container {
-            width: 100%;
-            max-width: 480px;
-            background-color: var(--white);
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            height: 90vh;
-        }
-
-        /* Header & Tabs */
-        .header {
-            padding: 20px 20px 0;
-            text-align: center;
-        }
-        .header h1 {
-            font-size: 20px;
-            color: var(--text-dark);
-            margin-bottom: 15px;
-        }
-        .tabs {
-            display: flex;
-            background-color: var(--secondary);
-            border-radius: 10px;
-            padding: 5px;
-            margin-bottom: 20px;
-        }
-        .tab-btn {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            background: none;
-            border-radius: 8px;
-            font-weight: 600;
-            color: var(--text-light);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .tab-btn.active {
-            background-color: var(--white);
-            color: var(--primary);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        /* Content Area */
-        .content-area {
-            flex: 1;
-            padding: 0 20px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .view {
-            display: none;
-        }
-        .view.active {
-            display: block;
-        }
-
-        /* Input Fields */
-        .input-group {
-            display: flex;
-            align-items: center;
-            background-color: var(--secondary);
-            border-radius: 10px;
-            padding: 10px 15px;
-            margin-bottom: 10px;
-            border: 2px solid transparent;
-        }
-        .input-group:focus-within {
-            border-color: var(--primary);
-        }
-        .input-label {
-            width: 80px;
-            font-weight: bold;
-            color: var(--text-dark);
-        }
-        .input-field {
-            flex: 1;
-            border: none;
-            background: none;
-            font-size: 18px;
-            outline: none;
-            color: var(--text-dark);
-        }
-        .input-unit {
-            color: var(--text-light);
-            font-weight: bold;
-        }
-
-        /* Buttons */
-        .btn-action {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 10px;
-            background-color: var(--primary);
-            color: var(--white);
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background 0.2s;
-        }
-        .btn-action:hover {
-            background-color: #357ABD;
-        }
-        .btn-secondary {
-            background-color: var(--secondary);
-            color: var(--text-dark);
-            margin-top: 5px;
-        }
-        .btn-secondary:hover {
-            background-color: var(--border);
-        }
-
-        /* Result & Solution Box */
-        .result-box {
-            background-color: #F8FAFC;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-            display: none;
-        }
-        .solution-content {
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dashed var(--border);
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--text-dark);
-            display: none;
-        }
-
-        /* Study Mode Specific */
-        .problem-box {
-            background-color: #FFFBEB;
-            border: 1px solid #FDE68A;
-            border-radius: 10px;
-            padding: 15px;
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-        .options-list {
-            list-style: none;
-        }
-        .option-item {
-            display: block;
-            padding: 12px;
-            margin-bottom: 8px;
-            background-color: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .option-item:hover {
-            background-color: var(--secondary);
-        }
-        input[type="radio"] {
-            margin-right: 10px;
-        }
-
-        /* Keypad */
-        .keypad {
-            padding: 15px 20px 20px;
-            background-color: var(--secondary);
-            border-top: 1px solid var(--border);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-        }
-        .key-btn {
-            background-color: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 15px 0;
-            font-size: 18px;
-            font-weight: bold;
-            color: var(--text-dark);
-            cursor: pointer;
-            box-shadow: 0 2px 0 rgba(0,0,0,0.05);
-        }
-        .key-btn:active {
-            transform: translateY(2px);
-            box-shadow: none;
-        }
-        .key-btn.special {
-            background-color: #E0E7FF;
-            color: var(--primary);
-            font-size: 15px;
-        }
-        .key-btn.action {
-            background-color: #FEE2E2;
-            color: var(--danger);
-        }
-    </style>
-</head>
-<body>
-
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전압 전류 측정 문제기</title>
-    <style>
-        :root {
-            --primary: #4A90E2;
-            --secondary: #F3F4F6;
-            --text-dark: #1F2937;
-            --text-light: #6B7280;
-            --danger: #EF4444;
-            --success: #10B981;
-            --white: #FFFFFF;
-            --border: #E5E7EB;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-        }
-
-        body {
-            background-color: #E2E8F0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .app-container {
-            width: 100%;
-            max-width: 480px;
-            background-color: var(--white);
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            height: 90vh;
-        }
-
-        /* Header & Tabs */
-        .header {
-            padding: 20px 20px 0;
-            text-align: center;
-        }
-        .header h1 {
-            font-size: 20px;
-            color: var(--text-dark);
-            margin-bottom: 15px;
-        }
-        .tabs {
-            display: flex;
-            background-color: var(--secondary);
-            border-radius: 10px;
-            padding: 5px;
-            margin-bottom: 20px;
-        }
-        .tab-btn {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            background: none;
-            border-radius: 8px;
-            font-weight: 600;
-            color: var(--text-light);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .tab-btn.active {
-            background-color: var(--white);
-            color: var(--primary);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        /* Content Area */
-        .content-area {
-            flex: 1;
-            padding: 0 20px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .view {
-            display: none;
-        }
-        .view.active {
-            display: block;
-        }
-
-        /* Input Fields */
-        .input-group {
-            display: flex;
-            align-items: center;
-            background-color: var(--secondary);
-            border-radius: 10px;
-            padding: 10px 15px;
-            margin-bottom: 10px;
-            border: 2px solid transparent;
-        }
-        .input-group:focus-within {
-            border-color: var(--primary);
-        }
-        .input-label {
-            width: 80px;
-            font-weight: bold;
-            color: var(--text-dark);
-        }
-        .input-field {
-            flex: 1;
-            border: none;
-            background: none;
-            font-size: 18px;
-            outline: none;
-            color: var(--text-dark);
-        }
-        .input-unit {
-            color: var(--text-light);
-            font-weight: bold;
-        }
-
-        /* Buttons */
-        .btn-action {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 10px;
-            background-color: var(--primary);
-            color: var(--white);
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background 0.2s;
-        }
-        .btn-action:hover {
-            background-color: #357ABD;
-        }
-        .btn-secondary {
-            background-color: var(--secondary);
-            color: var(--text-dark);
-            margin-top: 5px;
-        }
-        .btn-secondary:hover {
-            background-color: var(--border);
-        }
-
-        /* Result & Solution Box */
-        .result-box {
-            background-color: #F8FAFC;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-            display: none;
-        }
-        .solution-content {
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dashed var(--border);
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--text-dark);
-            display: none;
-        }
-
-        /* Study Mode Specific */
-        .problem-box {
-            background-color: #FFFBEB;
-            border: 1px solid #FDE68A;
-            border-radius: 10px;
-            padding: 15px;
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-        .options-list {
-            list-style: none;
-        }
-        .option-item {
-            display: block;
-            padding: 12px;
-            margin-bottom: 8px;
-            background-color: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .option-item:hover {
-            background-color: var(--secondary);
-        }
-        input[type="radio"] {
-            margin-right: 10px;
-        }
-
-        /* Keypad */
-        .keypad {
-            padding: 15px 20px 20px;
-            background-color: var(--secondary);
-            border-top: 1px solid var(--border);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-        }
-        .key-btn {
-            background-color: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 15px 0;
-            font-size: 18px;
-            font-weight: bold;
-            color: var(--text-dark);
-            cursor: pointer;
-            box-shadow: 0 2px 0 rgba(0,0,0,0.05);
-        }
-        .key-btn:active {
-            transform: translateY(2px);
-            box-shadow: none;
-        }
-        .key-btn.special {
-            background-color: #E0E7FF;
-            color: var(--primary);
-            font-size: 15px;
-        }
-        .key-btn.action {
-            background-color: #FEE2E2;
-            color: var(--danger);
-        }
-    </style>
-</head>
-<body>
-
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전압 전류 측정 문제기</title>
-    <style>
-        :root {
-            --primary: #4A90E2;
-            --secondary: #F3F4F6;
-            --text-dark: #1F2937;
-            --text-light: #6B7280;
-            --danger: #EF4444;
-            --success: #10B981;
-            --white: #FFFFFF;
-            --border: #E5E7EB;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-        }
-
-        body {
-            background-color: #E2E8F0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .app-container {
-            width: 100%;
-            max-width: 480px;
-            background-color: var(--white);
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            height: 90vh;
-        }
-
-        /* Header & Tabs */
-        .header {
-            padding: 20px 20px 0;
-            text-align: center;
-        }
-        .header h1 {
-            font-size: 20px;
-            color: var(--text-dark);
-            margin-bottom: 15px;
-        }
-        .tabs {
-            display: flex;
-            background-color: var(--secondary);
-            border-radius: 10px;
-            padding: 5px;
-            margin-bottom: 20px;
-        }
-        .tab-btn {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            background: none;
-            border-radius: 8px;
-            font-weight: 600;
-            color: var(--text-light);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .tab-btn.active {
-            background-color: var(--white);
-            color: var(--primary);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        /* Content Area */
-        .content-area {
-            flex: 1;
-            padding: 0 20px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .view {
-            display: none;
-        }
-        .view.active {
-            display: block;
-        }
-
-        /* Input Fields */
-        .input-group {
-            display: flex;
-            align-items: center;
-            background-color: var(--secondary);
-            border-radius: 10px;
-            padding: 10px 15px;
-            margin-bottom: 10px;
-            border: 2px solid transparent;
-        }
-        .input-group:focus-within {
-            border-color: var(--primary);
-        }
-        .input-label {
-            width: 80px;
-            font-weight: bold;
-            color: var(--text-dark);
-        }
-        .input-field {
-            flex: 1;
-            border: none;
-            background: none;
-            font-size: 18px;
-            outline: none;
-            color: var(--text-dark);
-        }
-        .input-unit {
-            color: var(--text-light);
-            font-weight: bold;
-        }
-
-        /* Buttons */
-        .btn-action {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 10px;
-            background-color: var(--primary);
-            color: var(--white);
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background 0.2s;
-        }
-        .btn-action:hover {
-            background-color: #357ABD;
-        }
-        .btn-secondary {
-            background-color: var(--secondary);
-            color: var(--text-dark);
-            margin-top: 5px;
-        }
-        .btn-secondary:hover {
-            background-color: var(--border);
-        }
-
-        /* Result & Solution Box */
-        .result-box {
-            background-color: #F8FAFC;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-            display: none;
-        }
-        .solution-content {
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dashed var(--border);
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--text-dark);
-            display: none;
-        }
-
-        /* Study Mode Specific */
-        .problem-box {
-            background-color: #FFFBEB;
-            border: 1px solid #FDE68A;
-            border-radius: 10px;
-            padding: 15px;
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-        .options-list {
-            list-style: none;
-        }
-        .option-item {
-            display: block;
-            padding: 12px;
-            margin-bottom: 8px;
-            background-color: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        .option-item:hover {
-            background-color: var(--secondary);
-        }
-        input[type="radio"] {
-            margin-right: 10px;
-        }
-
-        /* Keypad */
-        .keypad {
-            padding: 15px 20px 20px;
-            background-color: var(--secondary);
-            border-top: 1px solid var(--border);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-        }
-        .key-btn {
-            background-color: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 15px 0;
-            font-size: 18px;
-            font-weight: bold;
-            color: var(--text-dark);
-            cursor: pointer;
-            box-shadow: 0 2px 0 rgba(0,0,0,0.05);
-        }
-        .key-btn:active {
-            transform: translateY(2px);
-            box-shadow: none;
-        }
-        .key-btn.special {
-            background-color: #E0E7FF;
-            color: var(--primary);
-            font-size: 15px;
-        }
-        .key-btn.action {
-            background-color: #FEE2E2;
-            color: var(--danger);
-        }
-    </style>
-</head>
-<body>
-
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>전압 전류 측정 문제기</title>
-    <style>
-        :root {
-            --primary: #4A90E2;
-            --secondary: #F3F4F6;
-            --text-dark: #1F2937;
-            --text-light: #6B7280;
-            --danger: #EF4444;
-            --success: #10B981;
-            --white: #FFFFFF;
-            --border: #E5E7EB;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-        }
-
-        body {
-            background-color: #E2E8F0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .app-container {
-            width: 100%;
-            max-width: 480px;
-            background-color: var(--white);
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            height: 90vh;
-        }
-
-        /* Header & Tabs */
-        .header {
-            padding: 20px 20px 0;
-            text-align: center;
-        }
-        .header h1 {
-            font-size: 20px;
-            color: var(--text-dark);
-            margin-bottom: 15px;
-        }
-        .tabs {
-            display: flex;
-            background-color: var(--secondary);
-            border-radius: 10px;
-            padding: 5px;
-            margin-bottom: 20px;
-        }
-        .tab-btn {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            background: none;
-            border-radius: 8px;
-            font-weight: 600;
-            color: var(--text-light);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .tab-btn.active {
-            background-color: var(--white);
-            color: var(--primary);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        /* Content Area */
-        .content-area {
-            flex: 1;
-            padding: 0 20px;
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .view {
-            display: none;
-        }
-        .view.active {
-            display: block;
-        }
-
-        /* Input Fields */
-        .input-group {
-            display: flex;
-            align-items: center;
-            background-color: var(--secondary);
-            border-radius: 10px;
-            padding: 10px 15px;
-            margin-bottom: 10px;
-            border: 2px solid transparent;
-        }
-        .input-group:focus-within {
-            border-color: var(--primary);
-        }
-        .input-label {
-            width: 80px;
-            font-weight: bold;
-            color: var(--text-dark);
-        }
-        .input-field {
-            flex: 1;
-            border: none;
-            background: none;
-            font-size: 18px;
-            outline: none;
-            color: var(--text-dark);
-        }
-        .input-unit {
-            color: var(--text-light);
-            font-weight: bold;
-        }
-
-        /* Buttons */
-        .btn-action {
-            width: 100%;
-            padding: 15px;
-            border: none;
-            border-radius: 10px;
-            background-color: var(--primary);
-            color: var(--white);
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background 0.2s;
-        }
-        .btn-action:hover {
-            background-color: #357ABD;
-        }
-        .btn-secondary {
-            background-color: var(--secondary);
-            color: var(--text-dark);
-            margin-top: 5px;
-        }
-        .btn-secondary:hover {
-            background-color: var(--border);
-        }
-
-        /* Result & Solution Box */
-        .result-box {
-            background-color: #F8FAFC;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 15px;
-            margin-top: 15px;
-            display: none;
-        }
-        .solution-content {
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px dashed var(--border);
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--text-dark);
-            display: none;
-        }
-
-        /* Study Mode Specific */
-        .problem-box {
-            background-color: #FFFBEB;
-            border: 1px solid #FDE68A;
-            border-radius: 10px;
-            padding: 15px;
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-        .options-list {
-            list-style: none;
-        }
-        .option-item {
-            display: block;
-            padding: 12px;
-            margin-bottom: 8px;
-            background-color: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .option-item:hover {
-            background-color: var(--secondary);
-        }
-        input[type="radio"] {
-            margin-right: 10px;
-        }
-
-        /* Keypad */
-        .keypad {
-            padding: 15px 20px 20px;
-            background-color: var(--secondary);
-            border-top: 1px solid var(--border);
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-        }
-        .key-btn {
-            background-color: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 15px 0;
-            font-size: 18px;
-            font-weight: bold;
-            color: var(--text-dark);
-            cursor: pointer;
-            box-shadow: 0 2px 0 rgba(0,0,0,0.05);
-        }
-        .key-btn:active {
-            transform: translateY(2px);
-            box-shadow: none;
-        }
-        .key-btn.special {
-            background-color: #E0E7FF;
-            color: var(--primary);
-            font-size: 15px;
-        }
-        .key-btn.action {
-            background-color: #FEE2E2;
-            color: var(--danger);
-        }
+        .keypad { padding: 15px 20px 20px; background-color: var(--secondary); border-top: 1px solid var(--border); display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .key-btn { background-color: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 15px 0; font-size: 18px; font-weight: bold; color: var(--text-dark); cursor: pointer; box-shadow: 0 2px 0 rgba(0,0,0,0.05); }
+        .key-btn:active { transform: translateY(2px); box-shadow: none; }
+        .key-btn.special { background-color: #E0E7FF; color: var(--primary); font-size: 15px; }
+        .key-btn.action { background-color: #FEE2E2; color: var(--danger); }
     </style>
 </head>
 <body>
@@ -1281,7 +183,6 @@
     let focusedInput = null;
     let currentCorrectAnswer = 0;
 
-    // Track focused input for keypad
     document.querySelectorAll('.calc-input').forEach(input => {
         input.addEventListener('focus', (e) => {
             focusedInput = e.target;
@@ -1341,12 +242,6 @@
         }
     }
 
-    // 최소공배수 구하기 (병렬 전압 계산용)
-    function getLCM(a, b) {
-        const gcd = (x, y) => (!y ? x : gcd(y, x % y));
-        return (a * b) / gcd(a, b);
-    }
-
     function calculate() {
         let v = parseValue(document.getElementById('inp-v').value);
         let i = parseValue(document.getElementById('inp-i').value);
@@ -1362,32 +257,21 @@
             alert("최소 2개의 값을 입력해주세요.");
             return;
         }
-        if (r !== null && r < 0) {
-            alert("물리적 오류: 저항(R)은 음수가 될 수 없습니다.");
-            return;
-        }
-        if (v === 0 && i !== null && i !== 0 && r !== null && r !== 0) {
-            alert("물리적 오류: 전압이 0일 때 전류나 저항이 유효한 값을 가질 수 없습니다.");
-            return;
-        }
-
+        
         let solutionHTML = "";
         if (v !== null && i !== null) {
-            if (i === 0) { alert("전류가 0이면 저항을 계산할 수 없습니다 (단선)."); return; }
-            r = v / i;
-            p = v * i;
-            solutionHTML = `<b>1. 저항(R) 계산</b><br>옴의 법칙: R = V / I<br>R = ${v} / ${i} = <b>${r.toFixed(2)} Ω</b><br><br><b>2. 전력(P) 계산</b><br>전력 공식: P = V × I<br>P = ${v} × ${i} = <b>${p.toFixed(2)} W</b>`;
+            if (i === 0) return alert("단선 오류");
+            r = v / i; p = v * i;
+            solutionHTML = `<b>1. 저항 계산</b><br>R = V / I = ${v} / ${i} = <b>${r.toFixed(2)} Ω</b><br><br><b>2. 전력 계산</b><br>P = V × I = ${v} × ${i} = <b>${p.toFixed(2)} W</b>`;
         } else if (v !== null && r !== null) {
-            if (r === 0) { alert("저항이 0이면 전류가 무한대가 됩니다 (쇼트 오류)."); return; }
-            i = v / r;
-            p = (v * v) / r;
-            solutionHTML = `<b>1. 전류(I) 계산</b><br>옴의 법칙: I = V / R<br>I = ${v} / ${r} = <b>${i.toFixed(2)} A</b><br><br><b>2. 전력(P) 계산</b><br>전력 공식: P = V² / R<br>P = ${v}² / ${r} = <b>${p.toFixed(2)} W</b>`;
+            if (r === 0) return alert("쇼트 오류");
+            i = v / r; p = (v * v) / r;
+            solutionHTML = `<b>1. 전류 계산</b><br>I = V / R = ${v} / ${r} = <b>${i.toFixed(2)} A</b><br><br><b>2. 전력 계산</b><br>P = V² / R = <b>${p.toFixed(2)} W</b>`;
         } else if (i !== null && r !== null) {
-            v = i * r;
-            p = i * i * r;
-            solutionHTML = `<b>1. 전압(V) 계산</b><br>옴의 법칙: V = I × R<br>V = ${i} × ${r} = <b>${v.toFixed(2)} V</b><br><br><b>2. 전력(P) 계산</b><br>전력 공식: P = I² × R<br>P = ${i}² × ${r} = <b>${p.toFixed(2)} W</b>`;
+            v = i * r; p = i * i * r;
+            solutionHTML = `<b>1. 전압 계산</b><br>V = I × R = ${i} × ${r} = <b>${v.toFixed(2)} V</b><br><br><b>2. 전력 계산</b><br>P = I² × R = <b>${p.toFixed(2)} W</b>`;
         } else {
-            alert("현재 프로토타입은 (V,I), (V,R), (I,R) 조합을 우선 지원합니다.");
+            alert("기본 (V,I), (V,R), (I,R) 조합을 입력해주세요.");
             return;
         }
 
@@ -1413,7 +297,7 @@
         focusedInput = null;
     }
 
-    // 초고난도 문제 출제 로직
+    // 완전히 새롭게 개선된 문제 출제 로직
     function generateProblem(type = 'normal') {
         document.getElementById('problem-area').style.display = 'block';
         let problemText = "";
@@ -1421,114 +305,104 @@
         let unit = "";
 
         if (type === '직렬') {
-            // 직렬: 2개 또는 3개의 저항 (어려운 숫자 사용)
-            let isThree = Math.random() < 0.4; // 40% 확률로 3개 저항
-            let r1 = (Math.floor(Math.random() * 8) + 2) * 5; // 10, 15, 20...50
-            let r2 = (Math.floor(Math.random() * 8) + 2) * 5;
-            let r3 = isThree ? (Math.floor(Math.random() * 6) + 2) * 5 : 0;
+            let isThree = Math.random() < 0.4;
+            // 직렬: 2~16 옴 사이의 다채로운 저항값 생성
+            let r1 = Math.floor(Math.random() * 15) + 2; 
+            let r2 = Math.floor(Math.random() * 15) + 2;
+            let r3 = isThree ? (Math.floor(Math.random() * 15) + 2) : 0;
             
             let totalR = r1 + r2 + r3;
-            let i = Math.floor(Math.random() * 5) + 2; // 2A ~ 6A
+            // 2~10A 사이의 전류 생성 (전압 범위를 넓힘)
+            let i = Math.floor(Math.random() * 9) + 2; 
             let v = totalR * i;
 
             let subType = Math.floor(Math.random() * 4);
             let resText = `${r1}Ω, ${r2}Ω${isThree ? `, ${r3}Ω` : ''}`;
 
-            if (subType === 0) { // 부분 전압 묻기
-                problemText = `전압이 <b>${v}V</b>인 전원에 ${resText}의 저항이 <b>직렬</b>로 연결되어 있다. 이 중 <b>${r2}Ω 저항에 걸리는 전압(V)</b>은 얼마인가? (힌트: 먼저 전체 전류를 구하세요)`;
+            if (subType === 0) { 
+                problemText = `전압이 <b>${v}V</b>인 전원에 ${resText}의 저항이 <b>직렬</b>로 연결되어 있다. 이 중 <b>${r2}Ω 저항에 걸리는 전압(V)</b>은 얼마인가? (힌트: 먼저 회로의 전체 전류를 구하세요)`;
                 ans = i * r2; unit = "V";
-            } else if (subType === 1) { // 소비 전력 묻기
+            } else if (subType === 1) { 
                 problemText = `전압이 <b>${v}V</b>인 전원에 ${resText}의 저항이 <b>직렬</b>로 연결되어 있다. <b>${r1}Ω 저항에서 소비되는 전력(P)</b>은 얼마인가? (단위: W)`;
                 ans = i * i * r1; unit = "W";
-            } else if (subType === 2) { // 전체 전력 묻기
+            } else if (subType === 2) { 
                 problemText = `전압이 <b>${v}V</b>인 전원에 ${resText}의 저항이 <b>직렬</b>로 연결되어 있다. 회로 <b>전체에서 소비되는 총 전력(P)</b>은 얼마인가?`;
                 ans = v * i; unit = "W";
-            } else { // 기본 전체 전류
+            } else { 
                 problemText = `전압이 <b>${v}V</b>인 전원에 ${resText}의 저항이 <b>직렬</b>로 연결되어 있다. 회로에 흐르는 <b>전체 전류(I)</b>는 얼마인가?`;
                 ans = i; unit = "A";
             }
 
         } else if (type === '병렬') {
-            // 병렬: 다양한 케이스 준비. 
-            const parallelSets = [
-                {r1: 30, r2: 60, r3: 0, rt: 20},
-                {r1: 20, r2: 30, r3: 0, rt: 12},
-                {r1: 12, r2: 24, r3: 0, rt: 8},
-                {r1: 60, r2: 40, r3: 0, rt: 24},
-                {r1: 100, r2: 25, r3: 0, rt: 20},
-                {r1: 15, r2: 30, r3: 0, rt: 10},
-                {r1: 10, r2: 40, r3: 0, rt: 8},
-                {r1: 12, r2: 6, r3: 4, rt: 2}, // 3개짜리
-                {r1: 20, r2: 20, r3: 10, rt: 5} // 3개짜리
-            ];
+            // 병렬: 기준 전압을 먼저 정하고, 그 전압의 '약수'들을 저항으로 배치하여 전류가 반드시 정수로 떨어지도록 개선
+            const vOptions = [24, 36, 48, 60, 72, 120, 144, 180, 240];
+            let v = vOptions[Math.floor(Math.random() * vOptions.length)];
             
-            // 배수를 적용해 매번 답이 달라지게 만듦 (x1, x2, x3)
-            let multiplier = Math.floor(Math.random() * 3) + 1; 
-            let baseSet = parallelSets[Math.floor(Math.random() * parallelSets.length)];
+            // 전압의 약수 찾기 (최소 2옴부터 절반값까지)
+            let divisors = [];
+            for (let d = 2; d <= v / 2; d++) {
+                if (v % d === 0) divisors.push(d);
+            }
             
-            let r1 = baseSet.r1 * multiplier;
-            let r2 = baseSet.r2 * multiplier;
-            let r3 = baseSet.r3 * multiplier;
-            let totalR = baseSet.rt * multiplier;
-
-            // 전압을 저항들의 최소공배수의 배수로 설정하여 전류가 깔끔하게 떨어지게 만듦
-            let r_lcm = r3 === 0 ? getLCM(r1, r2) : getLCM(getLCM(r1, r2), r3);
-            let v = r_lcm * (Math.floor(Math.random() * 2) + 1); 
-            let totalI = v / totalR;
+            // 약수 배열 무작위로 섞기
+            divisors.sort(() => Math.random() - 0.5);
+            
+            let isThree = Math.random() < 0.4 && divisors.length >= 3;
+            let r1 = divisors[0];
+            let r2 = divisors[1];
+            let r3 = isThree ? divisors[2] : 0;
+            
+            let i1 = v / r1;
+            let i2 = v / r2;
+            let i3 = isThree ? (v / r3) : 0;
+            let totalI = i1 + i2 + i3;
 
             let subType = Math.floor(Math.random() * 4);
-            let resText = `${r1}Ω, ${r2}Ω${r3 !== 0 ? `, ${r3}Ω` : ''}`;
+            let resText = `${r1}Ω, ${r2}Ω${isThree ? `, ${r3}Ω` : ''}`;
 
-            if (subType === 0) { // 부분 전류 묻기
+            if (subType === 0) { 
                 problemText = `전압이 <b>${v}V</b>인 전원에 ${resText}의 저항이 <b>병렬</b>로 연결되어 있다. 이 중 <b>${r1}Ω 저항에 흐르는 전류(I)</b>는 얼마인가?`;
-                ans = v / r1; unit = "A";
-            } else if (subType === 1) { // 개별 소비 전력 묻기
+                ans = i1; unit = "A";
+            } else if (subType === 1) { 
                 problemText = `전압이 <b>${v}V</b>인 전원에 ${resText}의 저항이 <b>병렬</b>로 연결되어 있다. <b>${r2}Ω 저항 한 곳에서만 소비되는 전력(P)</b>은 얼마인가? (단위: W)`;
-                ans = (v * v) / r2; unit = "W";
-            } else if (subType === 2) { // 전체 전압 역추산
-                problemText = `${resText}의 저항이 <b>병렬</b>로 연결된 회로에 <b>전체 전류 ${totalI}A</b>가 흐르고 있다. 이 회로에 공급된 <b>전체 전압(V)</b>은 얼마인가? (힌트: 합성 저항을 먼저 구하세요)`;
+                ans = v * i2; unit = "W";
+            } else if (subType === 2) { 
+                problemText = `${resText}의 저항이 <b>병렬</b>로 연결된 회로에 <b>전체 전류 ${totalI}A</b>가 흐르고 있다. 이 회로에 공급된 <b>전체 전압(V)</b>은 얼마인가? (힌트: 병렬회로의 특징을 떠올려보세요)`;
                 ans = v; unit = "V";
-            } else { // 기본 전체 전류
+            } else { 
                 problemText = `전압이 <b>${v}V</b>인 전원에 ${resText}의 저항이 <b>병렬</b>로 연결되어 있다. 회로에 흐르는 <b>전체 전류(I)</b>는 얼마인가?`;
                 ans = totalI; unit = "A";
             }
         } else {
-            // 기본 옴의 법칙 (V, I, R) 랜덤 출제
             let types = ['V', 'I', 'R'];
             let target = types[Math.floor(Math.random() * types.length)];
             let i = Math.floor(Math.random() * 9) + 2;
             let r = Math.floor(Math.random() * 9) + 2;
             let v = i * r;
 
-            if (target === 'V') {
-                problemText = `어떤 회로의 저항이 ${r}Ω이고, 흐르는 전류가 ${i}A이다. 이 회로에 걸린 전압(V)은 얼마인가?`;
-                ans = v; unit = "V";
-            } else if (target === 'I') {
-                problemText = `전압이 ${v}V인 회로에 ${r}Ω의 저항이 연결되어 있다. 흐르는 전류(I)는 얼마인가?`;
-                ans = i; unit = "A";
-            } else {
-                problemText = `전압이 ${v}V이고 흐르는 전류가 ${i}A인 회로가 있다. 이 회로의 저항(R)은 얼마인가?`;
-                ans = r; unit = "Ω";
-            }
+            if (target === 'V') { problemText = `저항이 ${r}Ω이고, 흐르는 전류가 ${i}A인 회로에 걸린 전압(V)은?`; ans = v; unit = "V"; }
+            else if (target === 'I') { problemText = `전압이 ${v}V인 회로에 ${r}Ω의 저항이 연결되어 있다. 전류(I)는?`; ans = i; unit = "A"; }
+            else { problemText = `전압이 ${v}V이고 전류가 ${i}A인 회로의 저항(R)은?`; ans = r; unit = "Ω"; }
         }
 
         currentCorrectAnswer = ans;
         document.getElementById('problem-text').innerHTML = problemText;
 
-        // 정답 크기에 비례하여 그럴듯한 오답 생성 (난이도 상승)
+        // 보기(선택지) 생성 알고리즘 개선: 숫자가 몰리지 않도록 간격(magnitude) 강화
         let options = new Set([ans]);
         let safeCount = 0;
         
         let magnitude = 1;
-        if (ans >= 10 && ans < 50) magnitude = 2;
-        if (ans >= 50 && ans < 200) magnitude = 5;
-        if (ans >= 200) magnitude = 10;
-        if (ans >= 500) magnitude = 50;
+        if (ans > 10) magnitude = 2;
+        if (ans > 30) magnitude = 5;
+        if (ans > 100) magnitude = 10;
+        if (ans > 500) magnitude = 50;
 
-        // 랜덤 오답 생성
+        let offsetMultipliers = [-4, -3, -2, -1, 1, 2, 3, 4, 5];
+        
         while(options.size < 5 && safeCount < 100) {
-            let offset = (Math.floor(Math.random() * 11) - 5) * magnitude;
-            let fakeAns = ans + offset;
+            let mult = offsetMultipliers[Math.floor(Math.random() * offsetMultipliers.length)];
+            let fakeAns = ans + (mult * magnitude);
             
             if(fakeAns > 0 && fakeAns !== ans) {
                 options.add(fakeAns);
@@ -1536,19 +410,16 @@
             safeCount++;
         }
         
-        // 만약 못 채웠을 경우 강제 할당
+        // 부족한 보기 채우기
         let fallback = magnitude;
         while(options.size < 5) {
             if (!options.has(ans + fallback)) options.add(ans + fallback);
             fallback += magnitude;
         }
 
-        // 배열로 변환 후 피셔-예이츠 셔플
+        // 오름차순으로 정렬하여 실제 시험지처럼 깔끔하게 배치
         let optionsArray = Array.from(options);
-        for (let i = optionsArray.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [optionsArray[i], optionsArray[j]] = [optionsArray[j], optionsArray[i]];
-        }
+        optionsArray.sort((a, b) => a - b);
 
         let optionsHTML = "";
         optionsArray.forEach((opt, index) => {
