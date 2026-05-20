@@ -542,16 +542,24 @@
         currentCorrectAnswer = ans;
         document.getElementById('problem-text').innerHTML = problemText;
 
-        // 5지 선다 생성 (정답 + 오답 4개)
+       // 5지 선다 생성 (정답 + 오답 4개)
         let options = new Set([ans]);
         while(options.size < 5) {
             let fakeAns = ans + (Math.floor(Math.random() * 10) - 5);
             if(fakeAns > 0 && fakeAns !== ans) options.add(fakeAns);
         }
         
-        let shuffledOptions = Array.from(options).sort(() => Math.random() - 0.5);
+        // 배열로 변환
+        let optionsArray = Array.from(options);
+        
+        // 피셔-예이츠(Fisher-Yates) 셔플 적용: 배열을 무작위로 완벽하게 섞음
+        for (let i = optionsArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [optionsArray[i], optionsArray[j]] = [optionsArray[j], optionsArray[i]];
+        }
+        
         let optionsHTML = "";
-        shuffledOptions.forEach((opt, index) => {
+        optionsArray.forEach((opt, index) => {
             optionsHTML += `
                 <label class="option-item">
                     <input type="radio" name="answer" value="${opt}">
